@@ -1,0 +1,56 @@
+body{
+    background-color: beige;
+}
+h1{
+  font-family: verdana;  
+  font-weight: lighter;  
+}
+input[type="text"],[type="email"],[type="submit"],select,p,label{
+    height: 29px;
+    width: 50%;
+    margin: 05px 04px;
+    outline: none;
+    font-family: verdana;;
+}
+input[type="checkbox"]{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+input[type="text"],[type="email"],[type="submit"],select{
+    border-bottom: 1px solid black;
+    border-top: 0px solid black;
+    border-left: 0px solid black;
+    border-right: 0px solid black;
+}
+input[type="submit"]:hover{
+    background-color: bisque;
+    color: black;
+    box-shadow: 2px 2px 2px black;
+}
+p .state{
+    background-color: burlywood;
+    padding: 05px;
+    margin: 05px;
+    width: 100%;
+    box-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 2px black;;
+    color: aliceblue;
+    display: inline-block;
+}
+table{
+    background-color:cornsilk;
+    overflow-wrap: break-word;
+    width: 100%;
+    font-family: verdana;
+    color: blue;
+    padding: 05px;
+}
+th,td{
+    overflow-wrap: break-word;
+    padding: 05px;
+}
+ul, li{
+    list-style: none;
+    list-style-type: none;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dependent Option</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery library important cdn to run ajax library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#city").change(function(){
+                var cityName=$(this).val();
+                $.ajax({
+                    url:"state.php",
+                    method:"POST",
+                    data:{city:cityName},
+                    success:function(data){
+                        $("#state").html(data);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+   <center>
+    <h1>Example of Dependent Options Based on Click</h1>
+    <hr width="50%">
+    <form action="./result.php" method="post">
+        <label for="">Name</label>
+        <input type="text" name="name" id="name" placeholder="Your Name"><br>
+        <label for="">Email</label>
+        <input type="email" name="email" id="email" placeholder="Your Email"><br>
+        <label for="">City</label>
+        <select name="city" id="city">
+            <option value="" selected disabled>Select Your City Name </option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Indore">Indore</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Gorakhpur">Gorakhpur</option>
+        </select><br><label for="">STATE</label>
+        <i type="text" id="state" name="state" ></i><br>
+        <input type="submit" value="Submit">
+    </form>
+    </center>
+</body>
+</html>
